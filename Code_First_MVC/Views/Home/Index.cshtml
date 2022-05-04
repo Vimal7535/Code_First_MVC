@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Code_First_MVC.Models.Employees>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Mobile</th>
+        <th>Email</th>
+        <th>Salary</th>
+    </tr>
+    @foreach(var e in Model)
+            {
+                <tr>
+                    <td>@e.Id</td>
+                    <td>@e.Name</td>
+                    <td>@e.Address</td>
+                    <td>@e.Mobile</td>
+                    <td>@e.Email</td>
+                    <td>@e.Salary</td>
+                </tr>
+            }
+</table>
+<ul>
+    <li>@Html.ActionLink("Create", "Create")</li>
+</ul>
+
